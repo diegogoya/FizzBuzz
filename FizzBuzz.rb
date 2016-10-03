@@ -1,4 +1,56 @@
-numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+# Numbers definition
+numbers = []
+(1..100).each{ |n| numbers << n }
+
+# --- Each loop
+
+puts " "
+puts ".each" 
+puts " "
+
+
+numbers.each do |n|
+    if (n % 3) == 0 and (n % 5) == 0 
+        print "FizzBuzz"
+        if (n.to_s.split('')[0]) == '1'
+            puts "Bang"
+        else
+            print "\n"
+        end
+    elsif (n % 3) == 0
+        print "Fizz"
+        if (n.to_s.split('')[0]) == '1'
+            puts "Bang"
+        else
+            print "\n"
+        end
+    elsif (n % 5) == 0
+        print "Buzz"
+        if (n.to_s.split('')[0]) == '1'
+            puts "Bang"
+        else
+            print "\n"
+        end
+    else
+        puts "#{n}"
+    end
+end	
+
+
+
+# numbers.each do |element|
+#         if (element % 3) == 0 and (element % 5) == 0 
+#                 puts "FizzBuzz"
+#         elsif (element % 3) == 0
+#                 puts "Fizz"
+#         elsif (element % 5) == 0
+#                 puts "Buzz"
+#         else
+#                 puts "#{element}"
+# end
+# end
+
+=begin
 for element in numbers
 	if element == 1
 		puts "Bang"
@@ -34,28 +86,14 @@ for element in numbers
 		puts "#{element}"
 end
 end
-puts " "
-puts ".each" # Mismo ejercicio con funcion .each
-puts " "
+=end
 
-numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-numbers.each do |element|
-	if (element % 3) == 0 and (element % 5) == 0 
-  		puts "FizzBuzz"
-	elsif (element % 3) == 0
-  		puts "Fizz"
-	elsif (element % 5) == 0
-		puts "Buzz"
-	else
-		puts "#{element}"
-end
-end
 
+=begin
 puts " "
 puts "while" # Mismo ejercicio con funcion while
 puts " "
 
-numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 while
 	puts "numbers" 
 	if (element % 3) == 0 and (element % 5) == 0 
@@ -68,3 +106,4 @@ while
 		puts "#{element}"
 end
 end
+=end

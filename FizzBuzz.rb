@@ -8,32 +8,27 @@ puts " "
 puts ".each" 
 puts " "
 
+def putsBang(n, result)
+	if (n.to_s.split('')[0]) == '1'
+    	return result << "Bang" 
+    end
+end
 
 numbers.each do |n|
+	result = ""
     if (n % 3) == 0 and (n % 5) == 0 
-        print "FizzBuzz"
-        if (n.to_s.split('')[0]) == '1'
-            puts "Bang"
-        else
-            print "\n"
-        end
+        result << "FizzBuzz"
+        putsBang(n, result)
     elsif (n % 3) == 0
-        print "Fizz"
-        if (n.to_s.split('')[0]) == '1'
-            puts "Bang"
-        else
-            print "\n"
-        end
+        result << "Fizz"
+        putsBang(n, result)
     elsif (n % 5) == 0
-        print "Buzz"
-        if (n.to_s.split('')[0]) == '1'
-            puts "Bang"
-        else
-            print "\n"
-        end
+        result << "Buzz"
+        putsBang(n, result)
     else
-        puts "#{n}"
+        result << "#{n}"
     end
+    puts result
 end	
 
 
